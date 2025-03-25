@@ -1,4 +1,6 @@
 package models;
 
-public record ProductDto(String productName, double productPrice) {
+import java.math.BigDecimal;
+
+public record ProductDto(String productName, BigDecimal productPrice) {
 }
