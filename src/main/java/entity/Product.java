@@ -2,6 +2,8 @@ package entity;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "products")
 public class Product {
@@ -14,7 +16,7 @@ public class Product {
     private String productName;
 
     @Column(name = "product_price")
-    private double productPrice;
+    private BigDecimal productPrice;
 
     @Column(name = "product_quantity")
     private int productQuantity;
@@ -35,11 +37,11 @@ public class Product {
         this.productName = productName;
     }
 
-    public double getProductPrice() {
+    public BigDecimal getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(double productPrice) {
+    public void setProductPrice(BigDecimal productPrice) {
         this.productPrice = productPrice;
     }
 
